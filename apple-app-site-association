@@ -2,7 +2,22 @@
   "applinks": {
       "details": [
            {
-             "appIDs": [ "K5DRXPAXU8.com.pipefy.mobileapp" ]
+             "appIDs": [ "K5DRXPAXU8.com.pipefy.mobileapp" ],
+             "components": [
+                {
+                  "/": "/*",
+                  "comment": "Matches any URL"
+                },
+                {
+                  "/": "/help/website/*",
+                  "exclude": true,
+                  "comment": "Matches any URL whose path starts with /help/website/ and instructs the system not to open it as a universal link"
+                },
+                {
+                  "/": "/help/*",
+                  "comment": "Matches any URL whose path starts with /help/ "
+                }
+              ]
            }
        ]
    }
